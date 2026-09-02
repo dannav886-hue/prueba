@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UrbanBite | Comida Rápida</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#inicio"><span>🍔</span> Urban<span>Bite</span></a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#menu">Menú</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn">🛒 <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <p class="eyebrow">🔥 SABOR QUE NO ESPERA</p>
+        <h1>Tu antojo.<br><span>Tu momento.</span></h1>
+        <p class="hero-text">Hamburguesas, papas, perros y combos preparados al momento. Pide fácil y disfruta rápido.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="primary-btn">Ver menú →</a>
+          <a href="#ofertas" class="secondary-btn">Ver ofertas</a>
+        </div>
+        <div class="stats">
+          <div><strong>20 min</strong><small>Entrega promedio</small></div>
+          <div><strong>4.9/5</strong><small>Clientes felices</small></div>
+          <div><strong>100%</strong><small>Hecho al momento</small></div>
+        </div>
+      </div>
+      <div class="hero-food">
+        <div class="food-glow"></div>
+        <div class="burger">🍔</div>
+        <div class="floating-card card-one">⭐ 4.9<br><small>Favorito</small></div>
+        <div class="floating-card card-two">🔥 <b>30%</b><br><small>Combo del día</small></div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">NUESTRO MENÚ</p>
+          <h2>Elige tu favorito</h2>
+        </div>
+        <p>Productos preparados para que cada mordida tenga sabor.</p>
+      </div>
+
+      <div class="categories">
+        <button class="category active" data-filter="all">Todo</button>
+        <button class="category" data-filter="hamburguesas">🍔 Hamburguesas</button>
+        <button class="category" data-filter="perros">🌭 Perros</button>
+        <button class="category" data-filter="papas">🍟 Papas</button>
+        <button class="category" data-filter="bebidas">🥤 Bebidas</button>
+      </div>
+
+      <div class="products" id="products">
+        <article class="product" data-category="hamburguesas">
+          <div class="product-img burger-bg">🍔</div>
+          <div class="product-info">
+            <span class="tag">MÁS VENDIDA</span>
+            <h3>Urban Clásica</h3>
+            <p>Carne, queso cheddar, lechuga, tomate y salsa especial.</p>
+            <div class="product-bottom"><strong>$18.900</strong><button class="add-btn" data-name="Urban Clásica" data-price="18900">+</button></div>
+          </div>
+        </article>
+
+        <article class="product" data-category="hamburguesas">
+          <div class="product-img double-bg">🍔</div>
+          <div class="product-info">
+            <span class="tag spicy">🔥 INTENSA</span>
+            <h3>Double Fire</h3>
+            <p>Doble carne, doble queso, jalapeños y salsa picante.</p>
+            <div class="product-bottom"><strong>$25.900</strong><button class="add-btn" data-name="Double Fire" data-price="25900">+</button></div>
+          </div>
+        </article>
+
+        <article class="product" data-category="perros">
+          <div class="product-img hotdog-bg">🌭</div>
+          <div class="product-info">
+            <span class="tag">NUEVO</span>
+            <h3>Dog Supreme</h3>
+            <p>Salchicha premium, queso, tocineta, cebolla y salsas.</p>
+            <div class="product-bottom"><strong>$16.900</strong><button class="add-btn" data-name="Dog Supreme" data-price="16900">+</button></div>
+          </div>
+        </article>
+
+        <article class="product" data-category="papas">
+          <div class="product-img fries-bg">🍟</div>
+          <div class="product-info">
+            <span class="tag">CRUJIENTES</span>
+            <h3>Fries XL</h3>
+            <p>Papas crujientes con queso cheddar y salsa de la casa.</p>
+            <div class="product-bottom"><strong>$12.900</strong><button class="add-btn" data-name="Fries XL" data-price="12900">+</button></div>
+          </div>
+        </article>
+
+        <article class="product" data-category="hamburguesas">
+          <div class="product-img chicken-bg">🍔</div>
+          <div class="product-info">
+            <span class="tag">POLLO</span>
+            <h3>Chicken Crunch</h3>
+            <p>Pollo crispy, queso, lechuga y mayonesa de la casa.</p>
+            <div class="product-bottom"><strong>$19.900</strong><button class="add-btn" data-name="Chicken Crunch" data-price="19900">+</button></div>
+          </div>
+        </article>
+
+        <article class="product" data-category="bebidas">
+          <div class="product-img drink-bg">🥤</div>
+          <div class="product-info">
+            <span class="tag">FRÍA</span>
+            <h3>Gaseosa 400 ml</h3>
+            <p>Elige tu sabor favorito para acompañar tu combo.</p>
+            <div class="product-bottom"><strong>$5.900</strong><button class="add-btn" data-name="Gaseosa 400 ml" data-price="5900">+</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="offer" id="ofertas">
+      <div>
+        <p class="eyebrow">OFERTA DE HOY</p>
+        <h2>Combo Urban<br><span>para compartir</span></h2>
+        <p>2 hamburguesas + papas XL + 2 bebidas.</p>
+        <strong class="offer-price">$39.900</strong>
+        <button class="primary-btn" id="offerBtn">Agregar combo →</button>
+      </div>
+      <div class="offer-emoji">🍔🍟🥤</div>
+    </section>
+
+    <section class="contact" id="contacto">
+      <div>
+        <p class="eyebrow">¿TIENES HAMBRE?</p>
+        <h2>Tu pedido está<br><span>a un clic.</span></h2>
+      </div>
+      <p>Atendemos pedidos todos los días. Esta página funciona directamente en tu navegador, sin instalar nada.</p>
+      <button class="primary-btn" id="contactBtn">Hacer pedido</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">🍔 Urban<span>Bite</span></div>
+    <p>© 2026 UrbanBite · Sabor urbano, actitud gigante.</p>
+  </footer>
+
+  <div class="toast" id="toast">Producto agregado al carrito</div>
+
+  <aside class="cart-panel" id="cartPanel">
+    <div class="cart-header"><h2>Tu pedido</h2><button id="closeCart">✕</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty">Tu carrito está vacío.</p></div>
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+    <button class="primary-btn checkout" id="checkout">Confirmar pedido</button>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <script>
+    const cart = [];
+    const cartBtn = document.getElementById('cartBtn');
+    const cartPanel = document.getElementById('cartPanel');
+    const overlay = document.getElementById('overlay');
+    const cartItems = document.getElementById('cartItems');
+    const cartCount = document.getElementById('cartCount');
+    const cartTotal = document.getElementById('cartTotal');
+    const toast = document.getElementById('toast');
+
+    const money = value => '$' + value.toLocaleString('es-CO');
+
+    function showCart() {
+      cartPanel.classList.add('open');
+      overlay.classList.add('show');
+      renderCart();
+    }
+    function closeCart() {
+      cartPanel.classList.remove('open');
+      overlay.classList.remove('show');
+    }
+    function renderCart() {
+      if (!cart.length) {
+        cartItems.innerHTML = '<p class="empty">Tu carrito está vacío.</p>';
+        cartCount.textContent = '0';
+        cartTotal.textContent = '$0';
+        return;
+      }
+      cartItems.innerHTML = cart.map((item, i) =>
+        `<div class="cart-item"><div><b>${item.name}</b><small>${money(item.price)}</small></div>
+        <div class="quantity"><button onclick="changeQty(${i},-1)">−</button><span>${item.qty}</span><button onclick="changeQty(${i},1)">+</button></div></div>`
+      ).join('');
+      const count = cart.reduce((s,i)=>s+i.qty,0);
+      const total = cart.reduce((s,i)=>s+i.price*i.qty,0);
+      cartCount.textContent = count;
+      cartTotal.textContent = money(total);
+    }
+    function addToCart(name, price) {
+      const found = cart.find(i => i.name === name);
+      if (found) found.qty++;
+      else cart.push({name, price, qty:1});
+      renderCart();
+      toast.textContent = `${name} agregado al carrito`;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 1800);
+    }
+    function changeQty(index, amount) {
+      cart[index].qty += amount;
+      if (cart[index].qty <= 0) cart.splice(index,1);
+      renderCart();
+    }
+
+    document.querySelectorAll('.add-btn').forEach(btn => {
+      btn.addEventListener('click', () => addToCart(btn.dataset.name, Number(btn.dataset.price)));
+    });
+    document.getElementById('offerBtn').addEventListener('click', () => addToCart('Combo Urban', 39900));
+    cartBtn.addEventListener('click', showCart);
+    document.getElementById('closeCart').addEventListener('click', closeCart);
+    overlay.addEventListener('click', closeCart);
+    document.getElementById('contactBtn').addEventListener('click', showCart);
+    document.getElementById('checkout').addEventListener('click', () => {
+      if (!cart.length) return alert('Agrega al menos un producto.');
+      alert('¡Pedido preparado! Esta demo no realiza pagos reales.');
+    });
+
+    document.querySelectorAll('.category').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.category').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.product').forEach(card => {
+          card.style.display = filter === 'all' || card.dataset.category === filter ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
